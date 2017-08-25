@@ -1,6 +1,6 @@
-#### Reverter informações sensitivas de um commit que já vou enviado ao github.
+#### Reverter informações sensitivas de um commit que já foi enviado ao github.
 
-Exemplo: Você enviou a senha do banco de dados para o github em um commit e deseja remover tal senha.
+**Exemplo:** Você enviou a senha do banco de dados para o github em um commit e deseja remover tal senha.
 
 Primeiramente, encontre a chave do commit que você deseja alterar utilizando o comando `git log`:
 
