@@ -1,4 +1,29 @@
-#### Reverter informações sensitivas de um commit que já foi enviado ao github.
+### Remover arquivo que já foi commitado
+
+***
+
+Remove o arquivo e adiciona ao .gitignore para que ele não seja mais detectado pelo git
+```
+git rm --cached nome_do_arquivo
+echo "nome_do_arquivo" >> .gitignore
+```
+
+### Adicionar as mudanças locais a um branch e voltar a versão anterior do projeto
+
+***
+
+**Exemplo:** Você está trabalhando em uma nova funcionalidade mas o código está muito diferente do código original e você precisa voltar ao original para corrigir um bug
+
+Cria um novo branch, adiciona todos os arquivos modificados, faz o commit e faz o push para o github:
+```
+git checkout -b nome_do_novo_branch
+git add .
+git commit -m "Mensagem do commit"
+git push --set-upstream origin nome_do_novo_branch
+```
+### Reverter informações sensitivas de um commit que já foi enviado ao github.
+
+***
 
 **Exemplo:** Você enviou a senha do banco de dados para o github em um commit e deseja remover tal senha.
 
