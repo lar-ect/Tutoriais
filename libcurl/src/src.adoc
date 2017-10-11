@@ -1,0 +1,81 @@
+
+= Utilizando cURL com ESP8266
+Luiz Felipe Santana de Araújo Souza <luizfelipeplm@gmail.com>
+:listing-caption: Listing
+:toc: left
+:icons: font
+:source-highlighter: highlightjs
+
+
+Neste artigo você irá aprender a utilizar a biblioteca cURL, uma biblioteca bastante útil para transferência de dados, suportando diversos protocolos  (http, https, ftp, gopher, telnet, dict, file, e outros).
+Aqui mostraremos como instalar a biblioteca, criar um código que envia uma requisição GET a um servidor (ESP8266).
+
+== Instalando a biblioteca
+Para instalar a biblioteca vá a página de downloads da biblioteca, https://curl.haxx.se/download.html[aqui] e baixe a versão mais atualizada. Descompacte o arquivo e abra o terminal.
+No diretório da pasta que você descompactou digite:
+
+[source,bash]
+----
+./configure
+make
+make install
+----
+A partir deste momento a bilioteca está instalada e podemos utilizá-la para qualquer código em c++.
+== Utilizando um exemplo de código
+ O código a seguir accessa a página http://example.com e retorna o código HTML da página.
+
+[source,c++]
+.simpleGet.cpp
+----
+#include <stdio.h>
+#include <curl/curl.h>
+ 
+int main(void)
+{
+  CURL *curl;
+  CURLcode res;
+ 
+  curl = curl_easy_init();
+  if(curl) {
+    curl_easy_setopt(curl, CURLOPT_URL, "http://example.com");  # <1>
+    
+    curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
+ 
+    
+    res = curl_easy_perform(curl);
+    
+    if(res != CURLE_OK)
+      fprintf(stderr, "curl_easy_perform() failed: %s\n",curl_easy_strerror(res));
+ 
+    
+    curl_easy_cleanup(curl);
+  }
+  return 0;
+}
+----
+
+
+Copie e salve em um diretório de sua preferência, acesse este diretório pelo terminal e complie usando o seguinte comando:
+
+[source,bash]
+----
+g++ simpleGet.cpp -o exec -lcurl
+----
+Depois execute o porgrama
+[source,bash]
+----
+./exec
+----
+O comando *-lcurl* diz para o complidador utilizar a biblioteca na hora de complilar o código.
+
+== Programação do ESP8266
+
+Partimos agora para a programação do ESP, abra a IDE do Arduino vá em Exemplos -> ESP8266WiFi -> WiFiWebServer. Atualize as credenciais da rede e passe o código para o ESP. Após isso altere a url do exemplo Listing 6 para o endereço de IP do ESP na rede:
+
+[source,c++]
+----
+curl_easy_setopt(curl, CURLOPT_URL, "http://192.168.0.43/gpio/0");
+----
+Alterando ``/gpio/0`` para ``/gpio/1`` é possṕivel controlar o Led do ESP.
+
+Finalizamos este tutorial por aqui, é possivel obter mais informações sobre a libcurl https://curl.haxx.se/libcurl/c/[aqui].
