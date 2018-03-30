@@ -18,4 +18,18 @@
 
 - [Processamento de Imagens](https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_table_of_contents_imgproc/py_table_of_contents_imgproc.html#py-table-of-content-imgproc) 
 
+
+
+### Aprendizado de Máquina 
+
 - [Aprendizagem de Máquina](https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_ml/py_table_of_contents_ml/py_table_of_contents_ml.html#py-table-of-content-ml) 
+
+- [Curso de Aprendizado de Máquina - Coursera](https://www.coursera.org/learn/machine-learning) 
+
+- [Curso de Aprendizado de Máquina com Python - Cousera](https://pt.coursera.org/learn/python-machine-learning) 
+
+- [Curso de Aprendizado de Máquina com Python - Udemy](https://www.udemy.com/machine-learning-course-with-python/)
+
+- [Introdução ao Aprendizado de Máquina - Udacity](https://br.udacity.com/course/intro-to-machine-learning--ud120)
+
+- [Redes Neurais de Deep Learning - Coursera](https://pt.coursera.org/learn/neural-networks-deep-learning) 
