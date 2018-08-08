@@ -21,7 +21,9 @@ make
 make install
 ----
 A partir deste momento a bilioteca está instalada e podemos utilizá-la para qualquer código em c++.
+
 == Utilizando um exemplo de código
+
  O código a seguir accessa a página http://example.com e retorna o código HTML da página.
 
 [source,c++]
