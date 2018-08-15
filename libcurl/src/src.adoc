@@ -57,18 +57,18 @@ int main(void)
 ----
 
 
-Copie e salve em um diretório de sua preferência, acesse este diretório pelo terminal e complie usando o seguinte comando:
+Copie e salve em um diretório de sua preferência, acesse este diretório pelo terminal e compile usando o seguinte comando:
 
 [source,bash]
 ----
 g++ simpleGet.cpp -o exec -lcurl
 ----
-Depois execute o porgrama
+Depois execute o programa
 [source,bash]
 ----
 ./exec
 ----
-O comando *-lcurl* diz para o complidador utilizar a biblioteca na hora de complilar o código.
+O comando *-lcurl* diz para o compilador utilizar a biblioteca na hora de compilar o código.
 
 == Programação do ESP8266
 
