@@ -6,8 +6,9 @@
   
 ### Tutorial Arduino
 
-  - [Arduino em sua IDE](https://luizfelipelemon.github.io/tutorial-arduino/)
-
+  - [Instalando e configurando Arduino IDE (Linux)](https://www.arduino.cc/en/Guide/Linux)
+  - [Funções na Arduino IDE](https://luizfelipelemon.github.io/tutorial-arduino/)
+  
 ### ESP8266  
 
 - [Utilizando libcurl com ESP8266](https://github.com/lar-ect/Tutoriais/blob/master/libcurl/src/src.adoc)
